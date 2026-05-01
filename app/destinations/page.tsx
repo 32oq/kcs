@@ -137,7 +137,7 @@ function DestinationsContent() {
         {/* ── Hero ── */}
         <div className="relative h-72 md:h-96 overflow-hidden">
           <img
-            src="/images/kashmir-dal-lake-bg.jpg"
+            src="https://32oq.github.io/kcs/images/kashmir-dal-lake-bg.jpg"
             alt="Kashmir"
             className="absolute inset-0 w-full h-full object-cover"
           />

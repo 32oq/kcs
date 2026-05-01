@@ -193,7 +193,7 @@ function PackagesContent() {
         {/* ── Hero ── */}
         <div className="relative h-72 md:h-100 overflow-hidden">
           <img
-            src="/images/khardungla-pass.png"
+            src="https://32oq.github.io/kcs/images/khardungla-pass.png"
             alt="Kashmir Packages"
             className="absolute inset-0 w-full h-full object-cover"
           />

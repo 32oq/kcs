@@ -43,7 +43,7 @@ export default function Footer() {
             {/* Logo */}
             <div className="mb-5">
               <img
-                src="/images/logo-white.png"
+                src="https://32oq.github.io/kcs/images/logo-white.png"
                 alt="Kashmir Cascade"
                 className="h-12 w-auto object-contain"
               />

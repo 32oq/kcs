@@ -113,7 +113,7 @@ export default function Navbar({ onQuoteClick }: { onQuoteClick?: () => void }) 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <motion.img
-              src="/images/logo-white.png"
+              src="https://32oq.github.io/kcs/images/logo-white.png"
               alt="Kashmir Cascade"
               whileHover={{ scale: 1.05 }}
               className="h-10 w-auto object-contain drop-shadow-lg"

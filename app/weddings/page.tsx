@@ -19,42 +19,42 @@ const venues = [
   {
     name: "The LaLiT Grand Palace",
     badge: "Heritage Resort",
-    image: "/images/lalit-grand-palace.webp",
+    image: "https://32oq.github.io/kcs/images/lalit-grand-palace.webp",
     tags: ["Dal Lake", "Palace"],
     desc: "A 19th-century palace overlooking Dal Lake, offering spectacular views and opulent banquet halls for royal ceremonies.",
   },
   {
     name: "The Khyber Himalayan Resort",
     badge: "Mountain Resort",
-    image: "/images/khyber-himalayan-resort.webp",
+    image: "https://32oq.github.io/kcs/images/khyber-himalayan-resort.webp",
     tags: ["Gulmarg", "Snow Venue"],
     desc: "A breathtaking snow-draped resort in Gulmarg offering intimate mountain weddings and world-class Kashmiri hospitality.",
   },
   {
     name: "Royal Houseboat Wedding",
     badge: "Unique Venue",
-    image: "/images/luxury-houseboat.jpg",
+    image: "https://32oq.github.io/kcs/images/luxury-houseboat.jpg",
     tags: ["Nigeen Lake", "Houseboat"],
     desc: "Exchange vows on a beautifully decorated houseboat floating on the tranquil waters of Nigeen Lake as the sun sets.",
   },
   {
     name: "The Khyber — Snow Wedding",
     badge: "Mountain Resort",
-    image: "/images/khyber-himalayan-resort.webp",
+    image: "https://32oq.github.io/kcs/images/khyber-himalayan-resort.webp",
     tags: ["Gulmarg", "Snow Venue"],
     desc: "A once-in-a-lifetime snow wedding surrounded by pristine Himalayan peaks and winter pine forests at Gulmarg.",
   },
   {
     name: "LaLiT Grand — Palace Ceremony",
     badge: "Heritage Resort",
-    image: "/images/lalit-grand-palace.webp",
+    image: "https://32oq.github.io/kcs/images/lalit-grand-palace.webp",
     tags: ["Srinagar", "Lakeside"],
     desc: "Host your reception in the opulent banquet halls or on the sprawling lawns with panoramic Dal Lake vistas.",
   },
   {
     name: "Hotel & Restaurant Nedous",
     badge: "Classic Hotel",
-    image: "/images/nedous-hotel.jpeg",
+    image: "https://32oq.github.io/kcs/images/nedous-hotel.jpeg",
     tags: ["Srinagar", "Heritage Hotel"],
     desc: "Kashmir's most historic property dating to 1880, offering classic colonial elegance for an unforgettable intimate wedding.",
   },
@@ -178,7 +178,7 @@ export default function WeddingsPage() {
         {/* ── Hero ── */}
         <div className="relative h-80 md:h-[520px] overflow-hidden">
           <img
-            src="/images/pahalgam.jpg"
+            src="https://32oq.github.io/kcs/images/pahalgam.jpg"
             alt="Destination Weddings in Kashmir"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
