@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=5" />
+  <link rel="icon" type="image/png" href="/favicon.png?v=5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Satisfy&display=swap"
+    rel="stylesheet">
+  <meta name="description"
+    content="Premium travel agency in Patigooro Complex, Sopore, Jammu & Kashmir. Discover the beauty of Kashmir with our curated tours and packages." />
+  <meta name="keywords"
+    content="Kashmir tours, travel agency Sopore, Kashmir Cascade, Gulmarg skiing, Dal Lake tours, Ladakh trips" />
+  <meta name="author" content="Kashmir Cascade" />
+  <meta name="geo.region" content="IN-JK" />
+  <meta name="geo.placename" content="Sopore" />
+  <meta name="geo.position" content="34.2982;74.4673" />
+  <meta name="ICBM" content="34.2982, 74.4673" />
+  <title>Kashmir Cascade | Premium Travel Agency</title>
+  <script type="module" crossorigin src="/assets/index-CruLgtZe.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dj1uzs63.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

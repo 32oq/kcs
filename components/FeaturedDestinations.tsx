@@ -1,28 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight, Sparkles } from "lucide-react";
+import { MapPin, Route, Sparkles } from "lucide-react";
 import { destinations } from "@/lib/destinations";
 import type { Destination } from "@/lib/destinations";
 
-function DestCard({
-  dest,
-  className = "",
-  featured = false,
-  delay = 0,
-}: {
-  dest: Destination;
+interface DestCardProps {
+  dest:       Destination;
   className?: string;
-  featured?: boolean;
-  delay?: number;
-}) {
+  featured?:  boolean;
+  delay?:     number;
+  onExplore:  (dest: Destination) => void;
+}
+
+function DestCard({ dest, className = "", featured = false, delay = 0, onExplore }: DestCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] as const, delay }}
-      className={`relative overflow-hidden rounded-2xl group cursor-pointer select-none ${className}`}
+      className={`relative overflow-hidden rounded-2xl group select-none ${className}`}
       style={{ border: "1px solid rgba(14,165,233,0.1)" }}
       whileHover={{ scale: 1.012, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const } }}
     >
@@ -75,17 +73,32 @@ function DestCard({
           ))}
         </div>
 
-        <div className="self-start flex items-center gap-1.5 text-sm font-semibold text-white/60 group-hover:text-white transition-colors duration-300">
-          Explore
-          <ArrowRight size={13} className="text-primary-light" />
-        </div>
+        {/* Explore Journey button */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.96 }}
+          onClick={() => onExplore(dest)}
+          className="self-start flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-white transition-all duration-300"
+          style={{
+            background:     "rgba(14,165,233,0.18)",
+            border:         "1px solid rgba(14,165,233,0.35)",
+            backdropFilter: "blur(8px)",
+          }}
+        >
+          <Route size={12} />
+          Explore Journey
+        </motion.button>
       </div>
     </motion.div>
   );
 }
 
-export default function FeaturedDestinations() {
-  const [srinagar, gulmarg, pahalgam, sonamarg, doodhpathri, yusmarg] = destinations;
+export default function FeaturedDestinations({
+  onExplore,
+}: {
+  onExplore: (dest: Destination) => void;
+}) {
+  const [srinagar, gulmarg, pahalgam, sonamarg, doodhpathri, yusmarg] = destinations.filter((d) => d.featured);
 
   return (
     <section id="destinations" className="py-24 lg:py-32" style={{ background: "var(--bg)" }}>
@@ -117,23 +130,22 @@ export default function FeaturedDestinations() {
           </p>
         </motion.div>
 
-        {/* Editorial grid */}
         {/* Row 1: large Srinagar (2/3) + stacked Gulmarg & Pahalgam (1/3) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           <div className="md:col-span-2 h-80 md:h-120">
-            <DestCard dest={srinagar} className="h-full" featured delay={0} />
+            <DestCard dest={srinagar} className="h-full" featured delay={0}   onExplore={onExplore} />
           </div>
           <div className="flex flex-col gap-4 md:h-120">
-            <DestCard dest={gulmarg} className="h-48 md:flex-1" delay={0.1} />
-            <DestCard dest={pahalgam} className="h-48 md:flex-1" delay={0.2} />
+            <DestCard dest={gulmarg}  className="h-48 md:flex-1" delay={0.1} onExplore={onExplore} />
+            <DestCard dest={pahalgam} className="h-48 md:flex-1" delay={0.2} onExplore={onExplore} />
           </div>
         </div>
 
         {/* Row 2: 3 equal cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <DestCard dest={sonamarg} className="h-60" delay={0.15} />
-          <DestCard dest={doodhpathri} className="h-60" delay={0.25} />
-          <DestCard dest={yusmarg} className="h-60" delay={0.35} />
+          <DestCard dest={sonamarg}    className="h-60" delay={0.15} onExplore={onExplore} />
+          <DestCard dest={doodhpathri} className="h-60" delay={0.25} onExplore={onExplore} />
+          <DestCard dest={yusmarg}     className="h-60" delay={0.35} onExplore={onExplore} />
         </div>
 
       </div>

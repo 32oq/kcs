@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { MapPin, Phone, Mail, MessageCircle, ArrowRight } from "lucide-react";
 
 const explore = [
-  { label: "About Us",      href: "#about" },
-  { label: "Destinations",  href: "#destinations" },
-  { label: "Packages",      href: "#packages" },
-  { label: "Weddings",      href: "#weddings" },
-  { label: "Blog",          href: "#blog" },
-  { label: "Contact Us",    href: "#contact" },
+  { label: "About Us",      href: "/#about" },
+  { label: "Destinations",  href: "/destinations" },
+  { label: "Packages",      href: "/packages" },
+  { label: "Weddings",      href: "/weddings" },
+  { label: "Blog",          href: "/#blog" },
+  { label: "Contact Us",    href: "/contact" },
 ];
 
 const support = [
@@ -42,7 +43,7 @@ export default function Footer() {
             {/* Logo */}
             <div className="mb-5">
               <img
-                src="https://kashmircascade.com/logo-white.png?v=2"
+                src="/images/logo-white.png"
                 alt="Kashmir Cascade"
                 className="h-12 w-auto object-contain"
               />
@@ -75,10 +76,10 @@ export default function Footer() {
             <ul className="space-y-3">
               {explore.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-white/45 hover:text-primary-light text-sm transition-colors duration-200 flex items-center gap-1.5 group">
+                  <Link href={l.href} className="text-white/45 hover:text-primary-light text-sm transition-colors duration-200 flex items-center gap-1.5 group">
                     <ArrowRight size={11} className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-primary-light" />
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,10 +91,10 @@ export default function Footer() {
             <ul className="space-y-3">
               {destinations.map((d) => (
                 <li key={d}>
-                  <a href="#destinations" className="text-white/45 hover:text-primary-light text-sm transition-colors duration-200 flex items-center gap-1.5 group">
+                  <Link href="/destinations" className="text-white/45 hover:text-primary-light text-sm transition-colors duration-200 flex items-center gap-1.5 group">
                     <ArrowRight size={11} className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-primary-light" />
                     {d}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -49,7 +49,7 @@ const badgeColors: Record<string, string> = {
 };
 
 interface Props {
-  pkg: Package;
+  pkg:    Package;
   onBook: (pkg: Package) => void;
 }
 
